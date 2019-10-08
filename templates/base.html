@@ -3,13 +3,18 @@
 
 <head>
     <title>{{title}}</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
 
     <div>
-        <a href="/">Add a Blog Entry</a>
-        <a href="/newpost">Main Blog Page</a>
+        <a href="/blog">View Entry</a>
+        <a href="/newpost">New Blog</a>
     </div>
 
     {% block content %}

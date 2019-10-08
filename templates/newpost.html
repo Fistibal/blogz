@@ -7,12 +7,14 @@
     <label>
         Title for the blog:
         <input type="text" name="title" />
+        <span class="error">{{title_error}}</span>
     </label>
     <br />
 
     <label>
         your new blog:
         <textarea type="text" name='body' rows="10" cols="50" placeholder="Write your post here..."></textarea>
+        <span class="error">{{body_error}}</span>
     </label>
     <input type="submit" value='Add Entry' />
 </form>
