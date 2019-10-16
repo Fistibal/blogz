@@ -3,18 +3,17 @@
 {% block content %}
 
 {% if blogs|length == 0 %}
-<h3>No blog yet <span class="badge badge-secondary">New</span></h3>
+<h3 class="text-center">No blog yet</h3>
 {% else %}
 
-<div>
+<div class="text-center">
     {% for blog in blogs %}
         <a href="./blog?id={{blog.id}}">
             <h3>{{blog.title}}</h3>
         </a>
         <p>{{blog.body}}</p>
-        <p>Posted on: {{blog.date}}</p>
-        <p>Written by:<a href="/blog?user={{blog.owner.username}}">{{blog.owner.username}}</a></p>
-        <hr />
+        <p>Written by:<a href="/blog?user={{blogger}}">{{blogger}}</a></p>
+    <hr />
     {% endfor %}
 </div>
 

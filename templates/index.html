@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Blog's Users</h1>
+        <p class="lead">Welcome to the best blog page in the entire block.</p>
+    </div>
+</div>
+
+{% if users|length == 0 %}
+<h3>No blog yet <span class="badge badge-secondary">New</span></h3>
+{% else %}
+
+    {% for user in users %}
+        <a href="./blog?user={{user.username}}"><h3>{{user.username}}</h3></a>
+    {% endfor %}
+
+{% endif %}
+
+{% endblock %}
